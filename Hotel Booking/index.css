@@ -1,0 +1,500 @@
+.visible {
+    display: block;
+}
+
+#search-bar-datalist option {
+    font-size: large;
+}
+
+.stars {
+    color: orange;
+}
+
+.imvisible {
+    display: none;
+}
+
+.container {
+    display: block;
+    margin: auto;
+    width: 870px;
+    padding-top: 10px;
+    background-color: darkgrey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.top {
+    padding: 10px;
+    background-color: #37454D;
+    color: #ffffff;
+    border: 0px;
+    outline: 0px;
+}
+
+.top-list {
+    background-color: #37454D;
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid #37454D;
+    width: 145px;
+}
+
+/*================= FILTERS SEARCH LINE=================*/
+
+.search-bar {
+    background-color: #ffffff;
+    height: 40px;
+}
+
+#search-image {
+    display: inline;
+    float: left;
+    padding: 12px;
+    vertical-align: middle;
+}
+
+#search-container {
+    white-space: nowrap;
+}
+
+#search-bar {
+    font-size: 27px;
+    color: grey;
+    width: 70%;
+    margin: 0;
+    vertical-align: middle;
+    font-weight: 100;
+}
+
+#search-button {
+    align-self: flex-end;
+    height: 40px;
+    background-color: #007FAD;
+    padding: 0;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+    width: 25%;
+}
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+}
+
+/*================= FILTERS THIRD LINE=================*/
+
+.filter-container {
+    margin-top: 10px;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.filter-container td {
+    border-left: 1px solid #697379;
+    border-right: 1px solid #697379;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 120px;
+}
+
+.filter-container tr:first-child td {
+    border-top: 0;
+}
+
+.filter-container tr td:first-child {
+    border-left: 0;
+}
+
+.filter-container tr:last-child td {
+    border-bottom: 0;
+}
+
+.filter-container tr td:last-child {
+    border-right: 0;
+}
+
+#price {
+    width: 100%;
+}
+
+#max-price {
+    border-left: 2px solid #37454D;
+    text-align: right;
+}
+
+/*================= PRICE RANGE INPUT=================*/
+
+input[type=range].price {
+    width: 100%;
+    margin: 10px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+}
+
+input[type=range].price:focus {
+    outline: none;
+}
+
+input[type=range].price::-webkit-slider-runnable-track {
+    background: #3f9fc1;
+    border: 0;
+    border-radius: 2.7px;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+}
+
+input[type=range].price::-webkit-slider-thumb {
+    margin-top: -10px;
+    width: 25px;
+    height: 25px;
+    background: #e6e7e8;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type=range].price:focus::-webkit-slider-runnable-track {
+    background: #84c2d7;
+}
+
+input[type=range].price::-moz-range-track {
+    background: #3f9fc1;
+    border: 0;
+    border-radius: 2.7px;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+}
+
+input[type=range].price::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #e6e7e8;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+input[type=range].price::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 10.8px 0;
+    color: transparent;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+}
+
+input[type=range].price::-ms-fill-lower {
+    background: #28667c;
+    border: 0;
+    border-radius: 5.4px;
+}
+
+input[type=range].price::-ms-fill-upper {
+    background: #3f9fc1;
+    border: 0;
+    border-radius: 5.4px;
+}
+
+input[type=range].price::-ms-thumb {
+    width: 25px;
+    height: 25px;
+    background: #e6e7e8;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+}
+
+input[type=range].price:focus::-ms-fill-lower {
+    background: #3f9fc1;
+}
+
+input[type=range].price:focus::-ms-fill-upper {
+    background: #84c2d7;
+}
+
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the virtical space around the range input in IE*/
+
+@supports (-ms-ime-align:auto) {
+    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+    input[type=range].price {
+        margin: 0;
+        /*Edge starts the margin from the thumb, not the track as other browsers do*/
+    }
+}
+
+/*================= SORTING MAP BAR =================*/
+
+#map-btn {
+    cursor: pointer;
+}
+
+.sorting-map-bar {
+    padding: 5px;
+    width: 100%;
+}
+
+.sorting-map-bar td {
+    width: 50%;
+}
+
+.sorting-bar {
+    text-align: right;
+}
+
+.sorting-map-bar select {
+    width: 240px;
+    vertical-align: bottom;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #ffcc00;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*================= CALENDAR DATE PICKER=================*/
+
+.booking {
+    background-color: white;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.calendar tr * {
+    padding: 0%;
+    margin: 0%;
+    border: none;
+}
+
+#bluebar {
+    background-color: #007FAD;
+    min-width: 5px;
+}
+
+#orangebar {
+    background-color: #F48F00;
+    min-width: 5px;
+}
+
+.myClass:after {
+    content: "";
+    background: transparent url('img/darrow.gif') no-repeat;
+}
+
+.calendar-label {
+    color: black;
+    font-weight: initial;
+}
+
+/*================= CALENDAR DATE PICKER=================*/
+
+.booking td {
+    margin: 0;
+    margin: 20px;
+    width: 100%;
+    border: none;
+}
+
+#calendar-in, #calendar-out, #room-choice {
+    width: 250px;
+    height: 45px;
+}
+
+#room-choice {
+    width: 300px;
+    border: #ffffff 1px solid;
+    font-size: 18px;
+}
+
+.date {
+    width: 260px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hotel-name {
+    font-size: 25px;
+}
+
+.viewdeal button {
+    background-color: #428500;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 250px;
+}
+
+.result {
+    background-color: #fff;
+    width: 850px;
+    padding: 5px;
+    margin: 10px;
+    box-shadow: 3px 3px 5px 3px rgba(100, 100, 100, 0.8);
+    
+}
+
+.hotelprice {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: green;
+
+    border: 3px dashed green;
+}
+
+.rating span {
+    background-color: #316300;
+    padding: 5px;
+    color: white;
+}
+
+.map-pop {
+    display: none;
+}
+
+.map-container {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    position: fixed;
+    z-index: 100;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.map-display {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: slidein;
+    -webkit-animation-duration: 1s;
+    animation-name: slidein;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes slidein {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes slidein {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close-popup {
+    color: white;
+    float: right;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.close-popup:hover, .close-popup:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.c2 {
+    
+    width: 100%;
+}
+
+.thumbnail img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.rating-no {
+    color: white;
+    background-color: #316300;
+    padding: 3px;
+}
+
+.r1 ::before {
+    content: '★☆☆☆☆';
+    font-size: 20px;
+    color: orange;
+}
+
+.r2 ::before {
+    content: '★★☆☆☆';
+    font-size: 20px;
+    color: orange;
+}
+
+.r3 ::before {
+    content: '★★★☆☆';
+    font-size: 20px;
+    color: orange;
+}
+
+.r4::before {
+    content: '★★★★☆';
+    font-size: 20px;
+    color: orange;
+}
+
+.r5::before {
+    content: '★★★★★';
+    font-size: 20px;
+    color: orange;
+}

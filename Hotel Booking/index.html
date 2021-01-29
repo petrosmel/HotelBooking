@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <main class="container">
+        <!-- main search section -->
+        <section class="top">
+            <table>
+
+
+                <!-- search bar section -->
+                <tr>
+                    <div class="search-bar">
+                        <div id="search-image"><img src="img/search.gif" alt="search icon"></div>
+                        <div id="search-container">
+
+                            <input list="search-bar-datalist" id="search-bar" placeholder="Let's travel...">
+                            <datalist id="search-bar-datalist">
+                            </datalist>
+                            <input id="search-button" type="submit" value="Search">
+
+                        </div>
+                    </div>
+                </tr>
+
+
+                <!-- second raw -->
+                <tr class="booking">
+
+                    <td class="calendar" id="calendar-in">
+                        <table>
+                            <tr>
+                                <td rowspan="2" id="bluebar"></td>
+                                <td class="calendar-label">Check in</td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" class="date" value=""></td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <td class="calendar" id="calendar-out">
+                        <table>
+                            <tr>
+                                <td rowspan="2" id="orangebar"></td>
+                                <td class="calendar-label">Check in</td>
+                            </tr>
+                            <tr>
+                                <td><input type="date" class="date" value=""></td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <td> <select id="room-choice">
+                            <option value="single">‍&#129485; Single room</option>
+                            <option value="double">&#128111; Double room</option>
+                            <option value="family">&#128106; Family room</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- third raw  titles-->
+                <table class="filter-container">
+
+                    <tr>
+                        <td>Price €<span id="current-price">1500</span></td>
+                        <td>Max <label id="max_price"></label></td>
+                        <td>Property type</td>
+                        <td>Guest rating</td>
+                        <td>Hotel location</td>
+                        <td>More filters</td>
+                    </tr>
+
+                    <!-- third raw  titles-->
+                    <tr>
+                        <td colspan="2">
+                            <input type="range" class="price" id="price" min="0" max="1500" value="" />
+                        </td>
+                        <td><select class="top-list" id="property-type">
+                                <option value="">Select</option>
+                                <option class="stars" value="1">&#9733; &#9734; &#9734; &#9734; &#9734; (1/5)</option>
+                                <option class="stars" value="2">&#9733; &#9733; &#9734; &#9734; &#9734; (2/5)</option>
+                                <option class="stars" value="3">&#9733; &#9733; &#9733; &#9734; &#9734; (3/5)</option>
+                                <option class="stars" value="4">&#9733; &#9733; &#9733; &#9733; &#9734; (4/5)</option>
+                                <option class="stars" value="5">&#9733; &#9733; &#9733; &#9733; &#9733; (5/5)</option>
+
+
+                            </select></td>
+                        <td>
+                            <select class="top-list" id="guest-rating">
+                                <option value="">Select</option>
+                                <option value="Okay">0 – 2 Okay</option>
+                                <option value="Fair">2 – 6 Fair</option>
+                                <option value="Good">6 – 7 Good</option>
+                                <option value="Very Good">7 – 8.5 Very Good</option>
+                                <option value="Excellent">8.5 – 10 Excellent</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="top-list" id="h-location">
+                                <option value="">Select</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="filters" class="top-list">
+                                <option value="All">Select</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </table>
+        </section>
+
+        <!-- map section -->
+        <section>
+            <table class="sorting-map-bar">
+                <tr>
+                    <td><img id="map-btn" src="img/viewmap.jpg" alt="view map"></td>
+                    <td class="sorting-bar">Sort by
+                        <select>
+                            <option> Price Ascending </option>
+                            <option> Price Descending </option>
+                            <option> Name Ascending </option>
+                            <option> Name Descending </option>
+
+                        </select>
+
+                    </td>
+                    <td>
+                        <div class="tooltip"><img src="img/info.png" alt="more info"><span class="tooltiptext">
+                                Assigment 5 <br> by Petrosmel</span></div>
+                    </td>
+
+                </tr>
+            </table>
+
+        </section>
+
+
+
+
+        <!-- search result section -->
+        <section class="result-container">
+
+        </section>
+    </main>
+
+    <!-- Map PopUp -->
+    <section class="map-pop">
+        <div class="map-container">
+            <div class="close-bar"><span class="close-popup">&times;</span></div>
+            <iframe class="map-display"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d83998.94722687619!2d2.277019841665155!3d48.8588377391234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgr!4v1554987763683!5m2!1sen!2sgr">
+            </iframe>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
